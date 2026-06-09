@@ -12,7 +12,7 @@
   :root{
     --ink:#0a0a0a; --ink-soft:#1a1a1a;
     --paper:#f4f2ec; --paper-dim:#e9e6dd;
-    --glow:#fdf6e9; --gold:#c9b896;
+    --glow:#fdf6e9; --gold:#c9b896; --gold-deep:#9c7c3c;
     --text-dark:#2a2a2a; --text-mute:#8a8478; --text-light:#fdf6e9; --text-light-mute:#a99f8a;
   }
   html{scroll-behavior:smooth;}
@@ -49,13 +49,13 @@
 
   /* ===== section shared ===== */
   section{padding:140px 9%;position:relative;}
-  .eyebrow{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.32em;color:var(--gold);margin-bottom:28px;text-transform:uppercase;}
+  .eyebrow{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.32em;color:var(--gold-deep);margin-bottom:28px;text-transform:uppercase;}
   .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1s ease;}
   .reveal.in{opacity:1;transform:translateY(0);}
 
   /* ===== concept (dark) ===== */
   .concept{background:var(--ink);color:var(--text-light);padding-top:160px;padding-bottom:160px;}
-  .concept .eyebrow{color:var(--gold);}
+  .concept .eyebrow, .profile .eyebrow{color:var(--gold);}
   .concept .lead{font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(22px,2.6vw,32px);line-height:2.1;letter-spacing:.04em;margin-bottom:56px;}
   .concept .lead .em{color:var(--glow);}
   .concept .body{font-family:'Shippori Mincho',serif;font-weight:400;font-size:clamp(15px,1.5vw,17px);line-height:2.5;color:#d8d2c6;max-width:680px;}
@@ -74,7 +74,7 @@
   .consult .item{padding:48px 36px 48px 0;border-bottom:1px solid rgba(42,42,42,.15);}
   .consult .item:not(:last-child){border-right:1px solid rgba(42,42,42,.15);padding-right:36px;}
   .consult .item:not(:first-child){padding-left:36px;}
-  .consult .num{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.2em;color:var(--gold);margin-bottom:20px;}
+  .consult .num{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.2em;color:var(--gold-deep);margin-bottom:20px;}
   .consult .item h3{font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(18px,1.8vw,21px);color:var(--ink);margin-bottom:22px;line-height:1.6;}
   .consult .item p{font-size:15px;line-height:2.1;color:#3a3631;font-weight:400;}
   @media(max-width:768px){.consult .grid{grid-template-columns:1fr;}.consult .item{padding:40px 0 !important;border-right:none !important;}}
@@ -96,7 +96,7 @@
   .product .visual.photo-real{background:none;padding:0;}
   .product .visual.photo-real img{width:100%;height:100%;object-fit:cover;border-radius:2px;display:block;}
   .product .visual.dark .ll-logo{position:relative;z-index:2;width:54%;max-width:240px;opacity:.92;}
-  .product .info .label{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.24em;color:var(--gold);margin-bottom:18px;}
+  .product .info .label{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.24em;color:var(--gold-deep);margin-bottom:18px;}
   .product .info h3{font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(22px,2.4vw,28px);color:var(--ink);margin-bottom:26px;letter-spacing:.04em;}
   .product .info h3 .cs{display:block;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.2em;color:var(--text-mute);font-weight:400;margin-top:8px;}
   .product .info p{font-size:15px;line-height:2.2;color:#33302a;font-weight:400;margin-bottom:20px;}
@@ -120,7 +120,7 @@
   .contact h2{font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(24px,3vw,34px);color:var(--ink);margin-bottom:56px;letter-spacing:.04em;line-height:1.6;}
   .contact .list{max-width:620px;margin:0 auto 64px;text-align:left;}
   .contact .list .row{display:flex;align-items:flex-start;gap:18px;padding:22px 0;border-bottom:1px solid rgba(42,42,42,.12);}
-  .contact .list .row .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:13px;flex-shrink:0;}
+  .contact .list .row .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-deep);margin-top:13px;flex-shrink:0;}
   .contact .list .row p{font-size:clamp(15px,1.6vw,17px);line-height:1.9;color:var(--text-dark);font-weight:400;}
   .contact .cta-lead{font-family:'Shippori Mincho',serif;font-size:clamp(18px,2vw,22px);color:var(--ink);margin-bottom:40px;font-weight:500;}
   .contact .btn{display:inline-block;padding:20px 64px;background:var(--ink);color:var(--glow);font-family:'Cormorant Garamond',serif;font-size:15px;letter-spacing:.2em;text-decoration:none;border-radius:1px;transition:all .4s ease;border:1px solid var(--ink);}
