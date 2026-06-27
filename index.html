@@ -114,9 +114,11 @@
   .column .panel .meta .series-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(24px,2.8vw,34px);line-height:1.5;color:var(--ink);letter-spacing:.04em;}
   .column .panel .body p{font-size:15px;line-height:2.2;color:#33302a;font-weight:400;margin-bottom:24px;}
   .column .panel .episodes{list-style:none;margin:0 0 32px;}
-  .column .panel .episodes li{display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(42,42,42,.1);font-size:14px;color:#3a3631;}
+  .column .panel .episodes li{border-bottom:1px solid rgba(42,42,42,.1);}
+  .column .panel .episodes li a,.column .panel .episodes li .ep-row{display:flex;align-items:baseline;gap:16px;padding:14px 4px;font-size:14px;color:#3a3631;text-decoration:none;transition:padding-left .3s,color .3s;}
+  .column .panel .episodes li a:hover{padding-left:12px;color:var(--ink);}
   .column .panel .episodes li .ep-no{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.16em;color:var(--gold-deep);flex-shrink:0;min-width:48px;}
-  .column .panel .episodes li.upcoming{color:var(--text-mute);}
+  .column .panel .episodes li.upcoming .ep-row{color:var(--text-mute);cursor:default;}
   .column .panel .episodes li.upcoming .ep-no{color:var(--text-mute);}
   .column .panel .episodes li .ep-tag{margin-left:auto;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.14em;color:var(--text-mute);flex-shrink:0;}
   .column .panel .link{display:inline-flex;align-items:center;gap:10px;font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.16em;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px;transition:gap .3s;}
@@ -270,12 +272,12 @@
     </div>
     <div class="body">
       <ul class="episodes">
-        <li><span class="ep-no">第一回</span><span>公開中</span><span class="ep-tag">PUBLISHED</span></li>
-        <li class="upcoming"><span class="ep-no">第二回</span><span>近日公開</span><span class="ep-tag">COMING</span></li>
-        <li class="upcoming"><span class="ep-no">第三回</span><span>近日公開</span><span class="ep-tag">COMING</span></li>
-        <li class="upcoming"><span class="ep-no">第四回</span><span>近日公開</span><span class="ep-tag">COMING</span></li>
+        <li><a href="https://note.com/lantern_543/n/n06950918f130" target="_blank" rel="noopener"><span class="ep-no">第一回</span><span>公開中</span><span class="ep-tag">PUBLISHED</span></a></li>
+        <li><a href="https://note.com/lantern_543/n/n5e64e7277697" target="_blank" rel="noopener"><span class="ep-no">第二回</span><span>公開中</span><span class="ep-tag">PUBLISHED</span></a></li>
+        <li class="upcoming"><span class="ep-row"><span class="ep-no">第三回</span><span>近日公開</span><span class="ep-tag">COMING</span></span></li>
+        <li class="upcoming"><span class="ep-row"><span class="ep-no">第四回</span><span>近日公開</span><span class="ep-tag">COMING</span></span></li>
       </ul>
-      <a class="link serif-en" href="https://note.com/lantern_543/n/n06950918f130" target="_blank" rel="noopener">READ ON NOTE →</a>
+      <a class="link serif-en" href="https://note.com/lantern_543" target="_blank" rel="noopener">READ ON NOTE →</a>
     </div>
   </div>
 </section>
