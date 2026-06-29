@@ -140,23 +140,40 @@
   /* ===== column (paper-dim) ===== */
   .column{background:var(--paper-dim);}
   .column .head{margin-bottom:56px;}
-  .column .copy{font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(24px,3vw,36px);line-height:1.6;color:var(--ink);letter-spacing:.03em;margin-bottom:36px;}
-  .column .intro{font-family:'Shippori Mincho',serif;font-weight:400;font-size:clamp(15px,1.5vw,17px);line-height:2.4;color:#33302a;max-width:680px;}
-  .column .panel{margin-top:72px;display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center;background:var(--paper);border:1px solid rgba(42,42,42,.12);border-radius:2px;padding:56px;}
-  .column .panel .meta .series-label{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.24em;color:var(--gold-deep);margin-bottom:18px;text-transform:uppercase;}
-  .column .panel .meta .series-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(24px,2.8vw,34px);line-height:1.5;color:var(--ink);letter-spacing:.04em;}
-  .column .panel .body p{font-size:15px;line-height:2.2;color:#33302a;font-weight:400;margin-bottom:24px;}
-  .column .panel .episodes{list-style:none;margin:0 0 32px;}
-  .column .panel .episodes li{border-bottom:1px solid rgba(42,42,42,.1);}
-  .column .panel .episodes li a,.column .panel .episodes li .ep-row{display:flex;align-items:baseline;gap:16px;padding:14px 4px;font-size:14px;color:#3a3631;text-decoration:none;transition:padding-left .3s,color .3s;}
-  .column .panel .episodes li a:hover{padding-left:12px;color:var(--ink);}
-  .column .panel .episodes li .ep-no{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.16em;color:var(--gold-deep);flex-shrink:0;min-width:48px;}
-  .column .panel .episodes li.upcoming .ep-row{color:var(--text-mute);cursor:default;}
-  .column .panel .episodes li.upcoming .ep-no{color:var(--text-mute);}
-  .column .panel .episodes li .ep-tag{margin-left:auto;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.14em;color:var(--text-mute);flex-shrink:0;}
-  .column .panel .link{display:inline-flex;align-items:center;gap:10px;font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.16em;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px;transition:gap .3s;}
-  .column .panel .link:hover{gap:18px;}
-  @media(max-width:768px){.column .panel{grid-template-columns:1fr;gap:36px;padding:36px 28px;}}
+  .column .copy{font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(24px,3vw,36px);line-height:1.6;color:var(--ink);letter-spacing:.03em;}
+  /* zone header */
+  .column .zone{margin-bottom:18px;}
+  .column .zone-head{display:flex;align-items:baseline;gap:16px;margin-bottom:24px;}
+  .column .zone-head .zone-label{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,1.8vw,18px);letter-spacing:.18em;color:var(--gold-deep);}
+  .column .zone-head .zone-rule{flex:1;height:1px;background:rgba(42,42,42,.15);}
+  .column .zone-head .zone-note{font-size:13px;color:var(--text-mute);flex-shrink:0;}
+  .column .zone + .zone{margin-top:48px;}
+  /* sub label (連載 / コラム) */
+  .column .sub-label{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.22em;color:var(--text-mute);margin-bottom:12px;}
+  .column .sub-label::before{content:"— ";}
+  /* series panel */
+  .column .series-panel{background:var(--paper);border:1px solid rgba(42,42,42,.12);border-radius:2px;padding:30px 34px;margin-bottom:36px;}
+  .column .series-panel .series-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(18px,2.2vw,22px);color:var(--ink);letter-spacing:.03em;margin-bottom:12px;}
+  .column .series-panel .series-desc{font-family:'Shippori Mincho',serif;font-size:14px;line-height:2;color:#5a554c;margin-bottom:20px;max-width:560px;}
+  .column .series-panel .episodes{list-style:none;display:flex;gap:20px;flex-wrap:wrap;}
+  .column .series-panel .episodes li a{font-family:'Shippori Mincho',serif;font-size:14px;color:#3a3631;text-decoration:none;border-bottom:1px solid #3a3631;padding-bottom:2px;transition:color .3s,border-color .3s;}
+  .column .series-panel .episodes li a:hover{color:var(--gold-deep);border-color:var(--gold-deep);}
+  .column .series-panel .episodes li.upcoming{font-family:'Shippori Mincho',serif;font-size:14px;color:var(--text-mute);}
+  /* essay rows */
+  .column .essays{list-style:none;}
+  .column .essays li a,.column .essays li .essay-row{display:block;padding:4px 4px 18px;border-bottom:1px solid rgba(42,42,42,.1);text-decoration:none;color:var(--ink-soft);transition:padding-left .3s;}
+  .column .essays li a:hover{padding-left:10px;}
+  .column .essays li .essay-head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px;}
+  .column .essays li .essay-title{font-family:'Shippori Mincho',serif;font-size:clamp(16px,1.7vw,17px);color:var(--ink);flex:1;}
+  .column .essays li .essay-date{font-size:12px;color:var(--text-mute);flex-shrink:0;}
+  .column .essays li .essay-arrow{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--gold-deep);flex-shrink:0;}
+  .column .essays li.upcoming .essay-arrow{color:var(--text-mute);}
+  .column .essays li .essay-desc{display:block;font-family:'Shippori Mincho',serif;font-size:13.5px;line-height:1.9;color:#5a554c;max-width:560px;}
+  /* read on note */
+  .column .note-link{margin-top:34px;}
+  .column .note-link a{display:inline-flex;align-items:center;gap:10px;font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.16em;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px;transition:gap .3s;}
+  .column .note-link a:hover{gap:18px;}
+  @media(max-width:768px){.column .series-panel{padding:24px 22px;}.column .essays li .essay-date{display:none;}}
 
   /* ===== profile (dark) ===== */
   .profile{background:var(--ink);color:var(--text-light);}
@@ -295,23 +312,49 @@
 <section class="column" id="column">
   <div class="head">
     <div class="eyebrow reveal">Column</div>
-    <div class="copy reveal mincho">そのAIは、思考の加速装置か。<br>思考の停止装置か。</div>
-    <div class="intro reveal mincho">同じAIを手にしても、それを思考の加速装置として使う人と、思考を止める言い訳にする人がいる。その差はどこで生まれるのか――AIとの向き合い方について、note上で個人的に綴っています。</div>
+    <div class="copy reveal mincho">その灯りを、言葉にする。</div>
   </div>
-  <div class="panel reveal">
-    <div class="meta">
-      <div class="series-label">Note Series</div>
-      <div class="series-title">AIで伸びる人、<br>思考停止する人</div>
+
+  <!-- AIと、思考 -->
+  <div class="zone reveal">
+    <div class="zone-head">
+      <span class="zone-label mincho" style="font-family:'Shippori Mincho',serif;font-weight:600;">AIと、思考</span>
+      <span class="zone-rule"></span>
     </div>
-    <div class="body">
+
+    <div class="sub-label serif-en">連載</div>
+    <div class="series-panel">
+      <div class="series-title mincho">AIで伸びる人、思考停止する人</div>
+      <div class="series-desc mincho">同じAIを使っても、伸びる人と止まる人がいる。その差は「思考の加速」にあった。AIを思考停止の道具にしないための、四回の連載。</div>
       <ul class="episodes">
-        <li><a href="https://note.com/lantern_543/n/n06950918f130" target="_blank" rel="noopener"><span class="ep-no">第一回</span><span>公開中</span><span class="ep-tag">PUBLISHED</span></a></li>
-        <li><a href="https://note.com/lantern_543/n/n5e64e7277697" target="_blank" rel="noopener"><span class="ep-no">第二回</span><span>公開中</span><span class="ep-tag">PUBLISHED</span></a></li>
-        <li class="upcoming"><span class="ep-row"><span class="ep-no">第三回</span><span>近日公開</span><span class="ep-tag">COMING</span></span></li>
-        <li class="upcoming"><span class="ep-row"><span class="ep-no">第四回</span><span>近日公開</span><span class="ep-tag">COMING</span></span></li>
+        <li><a href="https://note.com/lantern_543/n/n06950918f130" target="_blank" rel="noopener">第一回</a></li>
+        <li><a href="https://note.com/lantern_543/n/n5e64e7277697" target="_blank" rel="noopener">第二回</a></li>
+        <li class="upcoming">第三回</li>
+        <li class="upcoming">第四回</li>
       </ul>
-      <a class="link serif-en" href="https://note.com/lantern_543/m/m657c7b04ad8f" target="_blank" rel="noopener">READ ON NOTE →</a>
     </div>
+
+    <div class="sub-label serif-en">コラム</div>
+    <ul class="essays">
+      <li class="upcoming"><span class="essay-row"><span class="essay-head"><span class="essay-title mincho">嘘より怖い、AIのお世辞</span><span class="essay-date">近日</span><span class="essay-arrow serif-en">→</span></span><span class="essay-desc mincho">AIは嘘をつく。それより怖いのが、お世辞だ。褒められ続けた一ヶ月で、自分の物差しが静かに狂っていった話。</span></span></li>
+    </ul>
+  </div>
+
+  <!-- OUR STORY（記事公開時にコメント解除）
+  <div class="zone reveal">
+    <div class="zone-head">
+      <span class="zone-label mincho" style="font-family:'Shippori Mincho',serif;font-weight:600;">LANTERNのこと</span>
+      <span class="zone-rule"></span>
+    </div>
+    <div class="sub-label serif-en">コラム</div>
+    <ul class="essays">
+      <li><a href="記事URL" target="_blank" rel="noopener"><span class="essay-head"><span class="essay-title mincho">なぜ株式会社LANTERNは、プロダクトを作るのか</span><span class="essay-date">2026.07</span><span class="essay-arrow serif-en">→</span></span><span class="essay-desc mincho">説明文をここに。</span></a></li>
+    </ul>
+  </div>
+  -->
+
+  <div class="note-link reveal">
+    <a class="serif-en" href="https://note.com/lantern_543/m/m657c7b04ad8f" target="_blank" rel="noopener">READ ON NOTE →</a>
   </div>
 </section>
 
