@@ -158,16 +158,20 @@
   .column .series-panel{background:var(--paper);border:1px solid rgba(42,42,42,.12);border-radius:2px;padding:30px 34px;margin-bottom:36px;}
   .column .series-panel .series-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(18px,2.2vw,22px);color:var(--ink);letter-spacing:.03em;margin-bottom:12px;}
   .column .series-panel .series-desc{font-family:'Shippori Mincho',serif;font-size:14px;line-height:2;color:#5a554c;margin-bottom:20px;max-width:560px;}
-  .column .series-panel .episodes{list-style:none;display:flex;gap:20px;flex-wrap:wrap;}
-  .column .series-panel .episodes li a{font-family:'Shippori Mincho',serif;font-size:14px;color:#3a3631;text-decoration:none;border-bottom:1px solid #3a3631;padding-bottom:2px;transition:color .3s,border-color .3s;}
-  .column .series-panel .episodes li a:hover{color:var(--gold-deep);border-color:var(--gold-deep);}
-  .column .series-panel .episodes li.upcoming{font-family:'Shippori Mincho',serif;font-size:14px;color:var(--text-mute);}
+  .column .series-panel .episodes{list-style:none;}
+  .column .series-panel .episodes li{border-top:1px solid rgba(42,42,42,.1);}
+  .column .series-panel .episodes li:first-child{border-top:none;}
+  .column .series-panel .episodes li a{display:flex;align-items:baseline;gap:16px;padding:13px 4px;text-decoration:none;transition:padding-left .3s;}
+  .column .series-panel .episodes li a:hover{padding-left:8px;}
+  .column .series-panel .episodes li .ep-no{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.1em;color:var(--gold-deep);flex-shrink:0;min-width:48px;}
+  .column .series-panel .episodes li .ep-ttl{font-family:'Shippori Mincho',serif;font-size:15px;line-height:1.6;color:var(--ink);transition:color .3s;}
+  .column .series-panel .episodes li a:hover .ep-ttl{color:var(--gold-deep);}
   /* essay rows */
   .column .essays{list-style:none;}
   .column .essays li a,.column .essays li .essay-row{display:block;padding:4px 4px 18px;border-bottom:1px solid rgba(42,42,42,.1);text-decoration:none;color:var(--ink-soft);transition:padding-left .3s;}
   .column .essays li a:hover{padding-left:10px;}
   .column .essays li .essay-head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px;}
-  .column .essays li .essay-title{font-family:'Shippori Mincho',serif;font-size:clamp(16px,1.7vw,17px);color:var(--ink);flex:1;}
+  .column .essays li .essay-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:clamp(18px,2.2vw,22px);letter-spacing:.03em;color:var(--ink);flex:1;}
   .column .essays li .essay-date{font-size:12px;color:var(--text-mute);flex-shrink:0;}
   .column .essays li .essay-arrow{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--gold-deep);flex-shrink:0;}
   .column .essays li.upcoming .essay-arrow{color:var(--text-mute);}
@@ -334,10 +338,10 @@
       <div class="series-title mincho">AIで伸びる人、思考停止する人</div>
       <div class="series-desc mincho">同じAIを使っても、伸びる人と止まる人がいる。その差は「思考の加速」にあった。AIを思考停止の道具にしないための、四回の連載。</div>
       <ul class="episodes">
-        <li><a href="https://note.com/lantern_543/n/n06950918f130" target="_blank" rel="noopener">第一回</a></li>
-        <li><a href="https://note.com/lantern_543/n/n5e64e7277697" target="_blank" rel="noopener">第二回</a></li>
-        <li><a href="https://note.com/lantern_543/n/n65c52aadfa75" target="_blank" rel="noopener">第三回</a></li>
-        <li><a href="https://note.com/lantern_543/n/n1e9bafb17872" target="_blank" rel="noopener">第四回</a></li>
+        <li><a href="https://note.com/lantern_543/n/n06950918f130" target="_blank" rel="noopener"><span class="ep-no serif-en">Vol.1</span><span class="ep-ttl">3分で企画書ができた。その企画書は、本当に価値があるのか</span></a></li>
+        <li><a href="https://note.com/lantern_543/n/n5e64e7277697" target="_blank" rel="noopener"><span class="ep-no serif-en">Vol.2</span><span class="ep-ttl">同じAIを使っているのに、なぜ差がつくのか</span></a></li>
+        <li><a href="https://note.com/lantern_543/n/n65c52aadfa75" target="_blank" rel="noopener"><span class="ep-no serif-en">Vol.3</span><span class="ep-ttl">五十点の企画書を、百点にする三つの手順</span></a></li>
+        <li><a href="https://note.com/lantern_543/n/n1e9bafb17872" target="_blank" rel="noopener"><span class="ep-no serif-en">Vol.4</span><span class="ep-ttl">AIを掘り下げるほど、人の価値が際立つ</span></a></li>
       </ul>
     </div>
 
