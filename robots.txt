@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lantern.co.jp/sitemap.xml
+Sitemap: https://www.lantern.co.jp/sitemap.xml
